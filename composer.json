@@ -1,0 +1,14 @@
+{
+    "name": "abmuazzam/datetoword",
+    "description": "Create date in words",
+    "autoload": {
+        "psr-4": {
+            "abmuazzam\\datetoword\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
