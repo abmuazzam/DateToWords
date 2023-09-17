@@ -110,6 +110,6 @@ class DateToWord{
     }
     private static function replaceAndCapitalize($string) : string
     {
-        return ucwords(strtolower(str_replace('-',' ',$string)));
+        return ucwords(strtolower(str_replace("_"," ",str_replace('-',' ',$string))));
     }
 }
