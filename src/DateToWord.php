@@ -8,7 +8,7 @@ class DateToWord{
     public static function changeDateToWordsFromDate($date): string
     {
        try{
-           $dateString = date('d-F-Y',$date);
+           $dateString = date('d-F-Y',strtotime($date));
            $date = explode("-",$dateString);
            $firstHalf = self::getDay($date[0]);
            $secondHalf = $date[1];
