@@ -3,11 +3,11 @@
     "description": "Create date in words",
     "autoload": {
         "psr-4": {
-            "abmuazzam\\datetoword\\": "src/"
+            "abmuazzam\\DateToWord\\": "src/"
         }
     },
     "require": {
-        "php": ">=7.4"
+        "php": ">=8.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

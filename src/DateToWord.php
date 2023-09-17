@@ -1,18 +1,22 @@
 <?php
 
-namespace abmuazzam\datetoword;
+namespace abmuazzam\DateToWord;
 
 use DateTime;
 
 class DateToWord{
-    public static function changeDateToWordsFromDate(DateTime $date): string
+    public static function changeDateToWordsFromDate($date): string
     {
-        $dateString = date('d-F-Y',$date);
-        $date = explode("-",$dateString);
-        $firstHalf = self::getDay($date[0]);
-        $secondHalf = $date[1];
-        $thirdHalf = self::getWord($date[2]);
-        return self::replaceAndCapitalize($firstHalf.' '.$secondHalf.' '.$thirdHalf);
+       try{
+           $dateString = date('d-F-Y',$date);
+           $date = explode("-",$dateString);
+           $firstHalf = self::getDay($date[0]);
+           $secondHalf = $date[1];
+           $thirdHalf = self::getWord($date[2]);
+           return self::replaceAndCapitalize($firstHalf.' '.$secondHalf.' '.$thirdHalf);
+       }catch(\TypeError $e){
+           return "Date format is invalid. (".$e->getMessage().")";
+       }
     }
     public static function changeDateToWords($day,$month,$year): string
     {
