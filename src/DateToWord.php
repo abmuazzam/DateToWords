@@ -9,10 +9,10 @@ class DateToWord{
     {
        try{
            $dateString = date('d-F-Y',strtotime($date));
-           $date = explode("-",$dateString);
-           $firstHalf = self::getDay($date[0]);
-           $secondHalf = $date[1];
-           $thirdHalf = self::getWord($date[2]);
+           $date1 = explode("-",$dateString);
+           $firstHalf = self::getDay($date1[0]);
+           $secondHalf = $date1[1];
+           $thirdHalf = self::getWord($date1[2]);
            return self::replaceAndCapitalize($firstHalf.' '.$secondHalf.' '.$thirdHalf);
        }catch(\TypeError $e){
            return "Date format is invalid. (".$e->getMessage().")";
