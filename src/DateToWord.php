@@ -110,7 +110,7 @@ class DateToWord{
     }
     private static function getDay($day){
         $_day = ["","first","second","third","forth","fifth","sixth","seventh","eighth","ninth","tenth","eleventh","twelfth","thirteenth","fourteenth","fifteenth","sixteenth","seventeenth","eighteenth","nineteenth","twentieth","twenty_first","twenty_second","twenty_third","twenty_forth","twenty_fifth","twenty_sixth","twenty_seventh","twenty_eighth","twenty_ninth","thirty_th","thirty_first"];
-        return array_key_exists($day,$_day) ? $_day[$day] : date("dS");
+        return array_key_exists($day,$_day) ? $_day[$day] : $day;
     }
     private static function replaceAndCapitalize($string) : string
     {
